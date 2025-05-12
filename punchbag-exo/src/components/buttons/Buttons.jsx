@@ -1,6 +1,12 @@
 
 import './buttons.css'
+import useSound from "use-sound"
+import TestSound from "../../sounds/punch-2-37333.mp3"
+
+
 export default function Buttons({ points, setPoints, isClicked, setIsClicked }) {
+
+    const [playSound, { stop }] = useSound(TestSound)
 
     let handleClick = () => {
         if (points > 0) {
@@ -18,6 +24,7 @@ export default function Buttons({ points, setPoints, isClicked, setIsClicked }) 
             btn.innerText = "Punch me"
         }
 
+        //On uitlise la variable d'état isClicked (true/false) pour mettre une animationet des sounds effect
         if (!isClicked) {
             setIsClicked(true);
             
@@ -25,6 +32,8 @@ export default function Buttons({ points, setPoints, isClicked, setIsClicked }) 
             setTimeout(() => {
                 setIsClicked(false);
             }, 500); // Should match animation duration
+
+            playSound();
         }
     }
 

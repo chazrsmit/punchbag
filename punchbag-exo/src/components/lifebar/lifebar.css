@@ -21,9 +21,9 @@
 }
 
 .lifebar-full {
-    background-color: green;
+    background-color: white;
 }
 
 .lifebar-empty {
-    background-color: yellow;
+    background-color: red;
 }
