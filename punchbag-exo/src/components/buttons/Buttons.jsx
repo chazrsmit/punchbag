@@ -14,6 +14,9 @@ export default function Buttons({ points, setPoints, isClicked, setIsClicked }) 
         if (points === 1) {
             btn.innerText = "Play again"
         }
+        else {
+            btn.innerText = "Punch me"
+        }
 
         if (!isClicked) {
             setIsClicked(true);
