@@ -17,6 +17,7 @@ export default function Lifebar({points}) {
                     key={index} 
                     // Pour pouvoir utiliser ici l'index en faisant la méthope map(), on va mettre l'index dans la clé (ne fonctionne pas dans tous les cas)
                     className={`lifebar-segment ${
+                        // On donne une classe à chaque élément contenu dans la div lifebar-container; si index = points, on ajouter une classe en plus à l'élément.
                         index >= points ? 'lifebar-empty' : 'lifebar-full'
                     }`}
                 ></div>
