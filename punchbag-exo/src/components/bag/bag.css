@@ -4,12 +4,16 @@
     75% { transform: translateX(10px); }
 }
 
+.img {
+    display: flex;
+    justify-content: center;
+}
+
 .bag-img {
-    cursor: pointer;
-    transition: transform 0.5s ease;
+    transition: transform 0.3s ease;
 }
 
 .punch-animation {
-    animation: punch 0.5s ease-in-out;
+    animation: punch 0.3s ease-in-out;
 }
 

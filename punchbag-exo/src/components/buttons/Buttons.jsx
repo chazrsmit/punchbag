@@ -1,5 +1,5 @@
 
-import { useState } from 'react'
+import './buttons.css'
 export default function Buttons({ points, setPoints, isClicked, setIsClicked }) {
 
     let handleClick = () => {
@@ -9,6 +9,10 @@ export default function Buttons({ points, setPoints, isClicked, setIsClicked }) 
 
         else {
             setPoints(5);
+        }
+
+        if (points === 1) {
+            btn.innerText = "Play again"
         }
 
         if (!isClicked) {
@@ -23,8 +27,9 @@ export default function Buttons({ points, setPoints, isClicked, setIsClicked }) 
 
     return (
 
-        <>
-            <button onClick={handleClick}>Punch me</button>
-        </>
+        <div className="div-button">
+            <button id="btn" onClick={handleClick}>Punch me</button>
+        </div>
+
     )
 }
