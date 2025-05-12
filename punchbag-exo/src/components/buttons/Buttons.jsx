@@ -1,22 +1,21 @@
-import { useState } from 'react'
-export default function Buttons() {
 
-    const[points, setPoints] = useState(5);
+import { useState } from 'react'
+export default function Buttons({ points, setPoints }) {
 
     let handleClick = () => {
         if (points > 0) {
             setPoints(points - 1);
+        }
+
+        else {
+            setPoints(5);
         }
     }
 
     return (
 
         <>
-
-        <h1>{points}</h1>
-
-        <button onClick={handleClick}>Punch me</button>
-        
+            <button onClick={handleClick}>Punch me</button>
         </>
     )
 }
