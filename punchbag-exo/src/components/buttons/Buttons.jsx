@@ -1,7 +1,7 @@
 
 import './buttons.css'
 import useSound from "use-sound"
-import TestSound from "../../sounds/punch-2-37333.mp3"
+import TestSound from "../../sounds/punch-41105.mp3"
 
 
 export default function Buttons({ points, setPoints, isClicked, setIsClicked }) {
