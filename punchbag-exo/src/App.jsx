@@ -18,8 +18,8 @@ function App() {
 
       <Lifebar points={points} />
       {/* Points devient un props pour Lifebar */}
-      <Bag points={points} />
-      <Buttons points={points} setPoints={setPoints} />
+      <Bag points={points} isClicked={isClicked} />
+      <Buttons points={points} setPoints={setPoints} isClicked={isClicked} setIsClicked={setIsClicked} />
       {/* Points + setPoints deviennent des props pour Buttons */}
 
     </>

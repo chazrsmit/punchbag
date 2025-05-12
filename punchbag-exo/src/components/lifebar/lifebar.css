@@ -1,6 +1,6 @@
 .lifebar-container {
     display: flex;
-    justify-content: flex-end; /* Changed to align from right */
+    justify-content: flex-end;
     width: 300px;
     height: 30px;
     background-color: #f0f0f0;
