@@ -1,7 +1,7 @@
 
 import './buttons.css'
 import useSound from "use-sound"
-import TestSound from "../../sounds/punch-41105.mp3"
+import TestSound from "../../sounds/punch-41105 (mp3cut.net).mp3"
 
 
 export default function Buttons({ points, setPoints, isClicked, setIsClicked }) {
@@ -18,7 +18,7 @@ export default function Buttons({ points, setPoints, isClicked, setIsClicked }) 
         }
 
         if (points === 1) {
-            btn.innerText = "Play again"
+            btn.innerText = "Play again ?"
         }
         else {
             btn.innerText = "Punch me"
@@ -30,9 +30,12 @@ export default function Buttons({ points, setPoints, isClicked, setIsClicked }) 
             
             setTimeout(() => {
                 setIsClicked(false);
-            }, 300);
+            }, 200);
 
-            playSound();
+            if (points !== 0 ) {
+                playSound();
+            }
+
         }
     }
 
