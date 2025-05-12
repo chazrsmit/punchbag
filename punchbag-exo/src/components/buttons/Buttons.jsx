@@ -6,7 +6,7 @@ import TestSound from "../../sounds/punch-41105.mp3"
 
 export default function Buttons({ points, setPoints, isClicked, setIsClicked }) {
 
-    const [playSound, { stop }] = useSound(TestSound)
+    const [playSound] = useSound(TestSound)
 
     let handleClick = () => {
         if (points > 0) {
@@ -30,7 +30,7 @@ export default function Buttons({ points, setPoints, isClicked, setIsClicked }) 
             
             setTimeout(() => {
                 setIsClicked(false);
-            }, 100);
+            }, 300);
 
             playSound();
         }
@@ -39,7 +39,12 @@ export default function Buttons({ points, setPoints, isClicked, setIsClicked }) 
     return (
 
         <div className="div-button">
-            <button id="btn" onClick={handleClick}>Punch me</button>
+            <button
+                id="btn"
+                className={`btn-hover color-1 ${isClicked ? 'red-text' : ''}`}
+                onClick={handleClick}
+            >
+                Punch me</button>
         </div>
 
     )
