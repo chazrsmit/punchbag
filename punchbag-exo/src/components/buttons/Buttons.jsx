@@ -24,7 +24,7 @@ export default function Buttons({ points, setPoints, isClicked, setIsClicked }) 
             btn.innerText = "Punch me"
         }
 
-        //On uitlise la variable d'état isClicked (true/false) pour mettre une animationet des sounds effect
+        //On uitlise la variable d'état isClicked (true/false) pour mettre une animation & des sounds effect
         if (!isClicked) {
             setIsClicked(true);
             
